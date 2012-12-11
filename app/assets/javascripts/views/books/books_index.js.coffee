@@ -3,6 +3,7 @@ class Ice.Views.BooksIndex extends Backbone.View
 
   events:
     'submit #new_book': 'createBook'
+    'click #draw': 'drawWinner'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -16,6 +17,10 @@ class Ice.Views.BooksIndex extends Backbone.View
   appendBook: (book) ->
     view = new Ice.Views.Book(model: book)
     $("#books").append(view.render().el)
+
+  drawWinner: (event) ->
+    event.preventDefault()
+    @collection.drawWinner()
 
   createBook: (event) ->
     event.preventDefault()
