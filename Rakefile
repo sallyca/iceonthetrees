@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Raffler::Application.load_tasks
+Ice::Application.load_tasks

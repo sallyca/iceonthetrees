@@ -10,11 +10,11 @@ class BooksController < ApplicationController
   end
 
   def create
-    respond_with Book.create(params[:entry])
+    respond_with Book.create(params[:book])
   end
 
   def update
-    respond_with Book.update(params[:id], params[:entry])
+    respond_with Book.update(params[:id], params[:book])
   end
 
   def destroy
