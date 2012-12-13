@@ -1,15 +1,15 @@
 Ice::Application.routes.draw do
   
+  resources :chapters
+
   resources :books
 
   resources :entries
 
   scope "api" do
     resources :entries
-  end
-
-  scope "api" do
     resources :books
+    resources :chapters
   end
 
   root to: "main#index"
