@@ -1,4 +1,4 @@
-<%= @book.get('title') %>
+<a href="#"><%= @book.get('title') %></a>
 <% if @book.get('winner'): %>
   <span class="winner">Виннер!</span>
 <% end %>
